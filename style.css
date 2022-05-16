@@ -1,3 +1,7 @@
+* {
+    outline: 1px solid red
+}
+
 input {
     display: none;
 }
@@ -30,6 +34,12 @@ article img {
     border-radius: 0.5rem
 }
 
+#active {
+    text-align: end;
+    position: relative;
+    bottom: 5.0rem;
+}
+
 #active label {
     border-radius: 1.0rem;
     display: inline-block;
@@ -39,12 +49,22 @@ article img {
     margin-top: 1.0rem;
     cursor: pointer;
     transition: 0.2s;
+        /* transform: scale(2, 3) */
 }
 
 
 #active label:hover {
     background: #76c8ff;
     border-color: #777 !important;
+}
+
+#active span {
+    display: block;
+    width: 2.5rem;
+    height: 2rem;
+    border-radius: 1rem;
+    transform: translate(-15%, -15%);
+    z-index: 20;
 }
 
 #switch1:checked ~ #slides .image{
@@ -77,8 +97,8 @@ article img {
     border-color: #18a3dd !important;
 }
 .content {
-    display: flex;
-    justify-content: end;
+    /* display: flex; */
+    justify-content: space-between;
 }
 
 .text {
