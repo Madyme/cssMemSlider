@@ -1,0 +1,11 @@
+@media screen and (max-width: 768px) {
+    #active {
+        text-align: center;
+        position: relative;
+    }
+
+    #texts {
+        position: relative;
+        top: 5.0rem;
+    }
+}
