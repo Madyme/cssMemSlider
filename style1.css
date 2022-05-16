@@ -1,40 +1,38 @@
 #slider { 
     position: relative;
-	text-align: center;
+	/* text-align: center; */
     top: 10px;
+    background: yellow;
+    max-width: 968px;
 }
 
 #slider{ 
 	margin: 0 auto;
-    padding: 2.0rem;
-    background: yellow;
-    border-radius: 10px;
 }
 
 #slides article{ 
 	width: 20%;
-	/* float: left; */
+	float: left;
 }
 
-#slides .image{ 
+#slides .image{
 	width: 500%;
-	/* line-height: 0; */
-    
+	line-height: 0;
 }
 
 #overflow{ 
 	width: 100%;
 	/* overflow: hidden; */
-}
+} 
+
 
 article img{ 
 	width: 100%;
-    border-radius: 7px;
 }
 
-#slider{ 
+/* #desktop:checked ~ #slider{ 
 	max-width: 960px; 
-}
+} */
 
 
 /* #switch1:checked ~ #controls label:nth-child(5), 
@@ -42,7 +40,7 @@ article img{
 #switch3:checked ~ #controls label:nth-child(2),
 #switch4:checked ~ #controls label:nth-child(3),
 #switch5:checked ~ #controls label:nth-child(4){
-	background: url('prev.png') no-repeat; 
+	background: url('prev.png') no-repeat;
 	float: left;
 	margin: 0 0 0 -84px; 
 	display: block;
@@ -68,9 +66,9 @@ label, a{
 	cursor: pointer;
 }
 
-.all input{ 
-	/* display: none; */
-}
+/* .all input{ 
+	display: none;
+} */
 
 
 /* #switch1:checked ~ #slides .image{
@@ -97,25 +95,24 @@ label, a{
 	margin: -25% 0 0 0;
 	width: 100%;
 	height: 50px;
+} */
+
+#active label{
+	border-radius: 10px; 
+	display: inline-block; 
+	width: 15px;
+	height: 15px;
+	background: #bbb;
 }
 
-
-#active{ 
-    margin: 23% 0 0;
+/* #active{ 
+	margin: 23% 0 0;
 	text-align: center;
-}
+} */
 
-*/
-#active label:hover{
-    background: #76c8ff;
-	border-color: #777 !important;
-} 
-#active label{ 
-    border-radius: 10px; 
-    display: inline-block; 
-    width: 15px;
-    height: 15px;
-    background: #bbb;
+#active label:hover{ 
+	background: #76c8ff;
+	border-color: #777 !important; 
 }
 
 
@@ -129,13 +126,14 @@ label, a{
 }
 
 /* #slides .image{ 
-	transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
-}
+   transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+} */
+/*
 
 #controls label:hover{ 
 	opacity: 0.6;
 }
 
-#controls label{
-    transition: opacity 0.2s ease-out;
+#controls label{ 
+	transition: opacity 0.2s ease-out;
 } */

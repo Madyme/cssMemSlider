@@ -1,47 +1,81 @@
-body {
-    display: flex;
-    justify-content: center;
-}
-
 input {
     display: none;
 }
 
-#container {
-    position: relative;
+#slider {
+    max-width: 968px;
     background: yellow;
+    position: relative;
+    border-radius: 1.0rem;
     padding: 2rem;
-    border-radius: 7px;
-    max-width:960px;
+    margin: 0 auto
 }
 
-.slide__image img{
-    border-radius: 0.7rem;
+#overflow {
+    overflow: hidden;
 }
 
+#slides article {
+    width: 20%;
+    float: left;
+}
 
+#slides .image {
+    width: 500%;
+    line-height: 0;
+}
 
-#active label{ 
-	border-radius: 10px; 
-	display: inline-block; 
-	width: 15px;
-	height: 15px;
-	background: #bbb;
+article img {
+    width: 100%;
+    border-radius: 0.5rem
+}
+
+#active label {
+    border-radius: 10px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: #bbb;
+    margin-top: 1.0rem;
     cursor: pointer;
-    transition: 0.5s background;
-    margin-top: 1rem;
+    transition: 0.2s;
 }
 
-#active label:hover{
-	background: #76c8ff;
+
+#active label:hover {
+    background: #76c8ff;
+    border-color: #777 !important;
 }
 
-#switch1:checked ~ #active label:nth-child(1),
-#switch2:checked ~ #active label:nth-child(2),
-#switch3:checked ~ #active label:nth-child(3),
-#switch4:checked ~ #active label:nth-child(4),
-#switch5:checked ~ #active label:nth-child(5){
-	background: #18a3dd;
-	border-color: #18a3dd !important;
+#switch1:checked~#active label:nth-child(1),
+#switch2:checked~#active label:nth-child(2),
+#switch3:checked~#active label:nth-child(3),
+#switch4:checked~#active label:nth-child(4),
+#switch5:checked~#active label:nth-child(5) {
+    background: #18a3dd;
+    border-color: #18a3dd !important;
 }
 
+#switch1:checked ~ #slides .image{
+	margin-left: 0;
+}
+
+#switch2:checked ~ #slides .image{
+	margin-left: -100%;
+}
+
+#switch3:checked ~ #slides .image{
+	margin-left: -200%;
+}
+
+#switch4:checked ~ #slides .image{
+	margin-left: -300%;
+}
+
+#switch5:checked ~ #slides .image{
+	margin-left: -400%;
+}
+
+#slides .image{ 
+   transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
